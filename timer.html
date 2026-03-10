@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .card{
+            border-style: solid;
+            margin: 20px;
+            display: inline-block;
+            padding: 20px 60px;
+        }
+        #timer{
+            
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial;
+            font-size:2rem;
+            
+        }
+        #head1{
+            text-align:center;
+            font-family:Arial;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    <h1 id="head1">Counter</h1>
+    <p id="timer">10</p>
+    </div>
+    <script>
+        let tmr1 = document.getElementById("timer");
+        let count1 = 10;
+        let interval1 = setInterval(function handle(){
+            count1--;
+            tmr1.textContent=count1;
+            if(count1 == 0){
+                clearInterval(interval1);
+            }
+        },1000);
+
+    </script>
+</body>
+</html>
